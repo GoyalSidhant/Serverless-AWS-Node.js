@@ -1,4 +1,4 @@
-# Severless-AWS-Node.js
+# Serverless-AWS-Node.js
 
 * Highly scalable
 * Cloud computing execution model 
