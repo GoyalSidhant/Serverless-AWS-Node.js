@@ -12,6 +12,9 @@
 
 # Deploy 
 * sls deploy -v 
+* it bundles the code, cloud formation template
+* Stored in S3 and stores as a zip file 
+* 
 
 
 # DynamoDB 

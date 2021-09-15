@@ -37,5 +37,13 @@ functions:
     createBook:
       handler: src/handlers/createBook.handler
       events:
-        method: POST
-        path: /createBook
+        - http: 
+          method: POST
+          path: /createBook
+        
+    getBook:
+      handler: src/handlers/getBook.handler
+      events:
+        - http: 
+            method: GET
+            path: /getBooks

@@ -9,20 +9,12 @@ const dynamoDB = AWS.DynamoDB.DocumentClient();
 
 async function createBook(event, context) {
 
-    const {title , author , image_url , description} = event.body
-    const book = {
-        id = uuid(),
-        title,
-        author,
-        image_url,
-        description
-    }
-
+   
     try{
-        await dynamoDB.put({
-         TableName: Books,
-         Item: book   
-        }).promise();
+      const result = await dynamoDB.scan({
+          TableName: Books
+      }).promise();
+      const books = result.items; 
     }
     catch(error){
         console.log(error);
@@ -31,7 +23,7 @@ async function createBook(event, context) {
 
     return {
       statusCode: 200,
-      body: JSON.stringify({ message: book}),
+      body: JSON.stringify({ books }),
     };
   }
   
