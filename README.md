@@ -8,6 +8,21 @@
 
 ## Disadvantages
 * Cold start times are huge 
+# Serverless Yaml file 
+
+# Deploy 
+* sls deploy -v 
+
+
+# DynamoDB 
+* Query V/s Scan -> Query based on primary and secondary indexes, whereas scan through each individual items int he database 
+* Primary Key
+* Partition Key 
+* Composite primary keys -> made by Partition and sort keys 
+* Global secondary index 
+* 
+
+
 
 
 
